@@ -17,10 +17,16 @@ from charts.trip_analysis import (
     create_stations_map,
     create_route_flow_map,
 )
- 
-df = pd.read_csv(
-    r"Ford_Go_Bike_Analysis\Ford_Go_Bike_Analysis\Part1-DataBase (Omar)\cleaned_data.csv"
-)
+
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_PATH = os.path.normpath(os.path.join(BASE_DIR, "..", "Part1-DataBase (Omar)", "cleaned_data.csv"))
+df = pd.read_csv(CSV_PATH)
+
+#df = pd.read_csv(
+#    r"Ford_Go_Bike_Analysis\Ford_Go_Bike_Analysis\Part1-DataBase (Omar)\cleaned_data.csv"
+#)
  
 df["start_time"] = pd.to_datetime(
     df["start_time"],

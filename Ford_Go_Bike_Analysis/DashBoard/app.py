@@ -45,7 +45,7 @@ app = Dash(
     assets_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets"),
     assets_url_path="assets",
 )
- 
+server = app.server
 app.title = "Ford GoBike Analytics"
  
 app.layout = html.Div(

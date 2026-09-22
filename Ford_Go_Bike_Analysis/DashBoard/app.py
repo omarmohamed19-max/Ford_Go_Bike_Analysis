@@ -19,7 +19,7 @@ from charts.trip_analysis import (
 )
  
 df = pd.read_csv(
-    r"ML-depi\Projects\Ford_GoBike\Ford_Go_Bike\Ford_Go_Bike_Analysis\Part1-DataBase (Omar)\cleaned_data.csv"
+    r"Ford_Go_Bike_Analysis\Ford_Go_Bike_Analysis\Part1-DataBase (Omar)\cleaned_data.csv"
 )
  
 df["start_time"] = pd.to_datetime(

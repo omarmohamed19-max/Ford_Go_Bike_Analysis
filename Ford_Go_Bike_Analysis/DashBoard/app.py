@@ -25,9 +25,6 @@ CSV_PATH = os.path.normpath(os.path.join(BASE_DIR, "..", "Part1-DataBase (Omar)"
 ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 df = pd.read_csv(CSV_PATH)
 
-#df = pd.read_csv(
-#    r"ML-depi\Projects\Ford_GoBike\Ford_Go_Bike\Ford_Go_Bike_Analysis\Part1-DataBase (Omar)\cleaned_data.csv"
-#)
  
 df["start_time"] = pd.to_datetime(
     df["start_time"],
@@ -89,9 +86,7 @@ app.layout = html.Div(
         "padding": "0",
     },
 )
- 
- 
-# ---- فتح/قفل الفلاتر بزرار الـ ☰ ----
+
 @app.callback(
     Output("filters-panel", "style"),
     Input("filters-toggle-btn", "n_clicks"),

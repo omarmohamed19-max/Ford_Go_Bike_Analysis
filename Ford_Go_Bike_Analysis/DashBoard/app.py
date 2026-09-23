@@ -21,7 +21,7 @@ from charts.trip_analysis import (
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CSV_PATH = os.path.normpath(os.path.join(BASE_DIR, "..", "Part1-DataBase (Omar)", "cleaned_data.csv"))
+CSV_PATH = os.path.normpath(os.path.join(BASE_DIR, "..", "Part1-DataBase", "cleaned_data.csv"))
 ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 df = pd.read_csv(CSV_PATH)
 

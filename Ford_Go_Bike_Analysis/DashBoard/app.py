@@ -17,10 +17,17 @@ from charts.trip_analysis import (
     create_stations_map,
     create_route_flow_map,
 )
- 
-df = pd.read_csv(
-    r"ML-depi\Projects\Ford_GoBike\Ford_Go_Bike\Ford_Go_Bike_Analysis\Part1-DataBase (Omar)\cleaned_data.csv"
-)
+
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_PATH = os.path.normpath(os.path.join(BASE_DIR, "..", "Part1-DataBase (Omar)", "cleaned_data.csv"))
+ASSETS_DIR = os.path.join(BASE_DIR, "assets")
+df = pd.read_csv(CSV_PATH)
+
+#df = pd.read_csv(
+#    r"ML-depi\Projects\Ford_GoBike\Ford_Go_Bike\Ford_Go_Bike_Analysis\Part1-DataBase (Omar)\cleaned_data.csv"
+#)
  
 df["start_time"] = pd.to_datetime(
     df["start_time"],
@@ -42,10 +49,10 @@ if "duration_min" not in df.columns:
 app = Dash(
     __name__,
     suppress_callback_exceptions=True,
-    assets_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets"),
+    assets_folder=ASSETS_DIR,
     assets_url_path="assets",
 )
- 
+server = app.server
 app.title = "Ford GoBike Analytics"
  
 app.layout = html.Div(

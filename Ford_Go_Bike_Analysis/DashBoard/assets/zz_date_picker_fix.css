@@ -21,31 +21,3 @@
 }
 
 
-.Select-control, .dash-dropdown {
-    max-width: 100% !important;
-    overflow: hidden !important;
-}
-
-.Select-multi-value-wrapper {
-    display: flex !important;
-    flex-wrap: wrap !important; 
-    max-height: 75px !important; 
-    overflow-y: auto !important;  
-    width: 100% !important;
-}
-
-.Select-value {
-    max-width: 100% !important;
-    margin: 2px !important;
-    font-size: 11px !important;
-    background-color: #e6f4f1 !important;
-    border-color: #1F9E89 !important;
-}
-
-.Select-value-label {
-    max-width: 75px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    color: #1F9E89 !important;
-}

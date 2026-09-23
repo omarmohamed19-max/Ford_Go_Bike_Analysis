@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-from dash import Dash, html, Input, Output, State
+from dash import Dash, html, Input, Output, State, doc
  
 from components.colors import COLORS
 from components.header import build_header

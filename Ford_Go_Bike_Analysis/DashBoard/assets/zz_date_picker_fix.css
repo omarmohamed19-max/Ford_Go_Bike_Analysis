@@ -5,3 +5,11 @@
 .dash-datepicker-calendar td.dash-datepicker-calendar-date-highlighted:not(.dash-datepicker-calendar-date-outside){
     color: #075e5e;
 }
+
+
+.Select-multi-value-wrapper {
+    max-height: 36px !important;
+    overflow-y: hidden !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
